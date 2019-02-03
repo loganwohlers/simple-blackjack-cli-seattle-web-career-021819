@@ -30,6 +30,7 @@ def initial_round
 end
 
 def hit? (total)
+display_card_total(total)
  prompt_user
  input=get_user_input
  if input=='h'
@@ -56,7 +57,6 @@ def runner
   welcome
   total=initial_round
   while total<=21
-    display_card_total(total)
     total=hit?(total)
   end
   end_game(total)

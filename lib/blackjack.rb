@@ -36,6 +36,7 @@ def hit? (total)
    total+=deal_card
    return total
  elsif input=='s'
+   return total
  else
    invalid_command
  end

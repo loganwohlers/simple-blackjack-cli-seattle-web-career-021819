@@ -8,6 +8,7 @@ end
 
 def display_card_total (total)
   puts "Your cards add up to #{total}"
+  total
 end
 
 def prompt_user
@@ -23,11 +24,22 @@ def end_game (num)
 end
 
 def initial_round
-  # code #initial_round here
+  c1=deal_card
+  c2=deal_card
+  display_card_total(c1+c2)
 end
 
-def hit?
-  # code hit? here
+def hit? (total)
+ prompt_user
+ input=get_user_input
+ if input=='h'
+   total+=deal_card
+ elsif input=='s'
+ else
+   invalid_command
+ end
+ 
+   
 end
 
 def invalid_command
